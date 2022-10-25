@@ -1,0 +1,117 @@
+.slider{
+    position: relative;
+    width: 95%;
+    height: 700px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    @include media(576){
+        height: 400px;
+    }
+    &__inner{
+        width: 100%;
+        height: 100%;
+    }
+    &__item{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s;
+        &.active{
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+    }
+    &__info{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(94.52deg, rgba(4, 5, 17, 0.72) 1.89%, rgba(88, 88, 88, 0) 65.32%), url(transportation-logistics.jpg);
+        filter: drop-shadow(5px 15px 40px rgba(11, 24, 97, 0.32));
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 46px;
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 126%;
+        width: 463px;
+        @include media(576){
+            font-size: 32px;
+            line-height: 40px;
+            width: 90%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        color: #fff;
+        margin-top: 8px;
+        margin-bottom: 37px;
+        width: 345px;
+        @include media(576){
+            font-size: 16px;
+            line-height: 21px;
+            width: 90%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+    &__left, &__right{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 15%;
+        cursor: pointer;
+        z-index: 99;
+        border: none;
+        background: transparent;
+        & i{
+            color: #fff;
+            font-size: 41px;
+            transition: .3s;
+
+        }
+        &:hover{
+            & i{
+                transform: scale(1.5);
+            }
+        }
+
+    }
+    &__left{
+        left: 0;
+        & i{
+            &::after{
+                content: "\f053";
+            }
+        }
+    }
+    &__right{
+        right: 0;
+        & i{
+            &::after{
+                content: "\f054";
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.nav{
+    padding: 25px 0;
+    & .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        flex-grow: 1;
+    }
+    &-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        &.active{
+            position: absolute;
+            top: 103px;
+            left: 0;
+            background: $gray;
+            width: 100%;
+            height: max-content;
+            display: flex;
+            z-index: 100;
+        }
+
+        @include media(992){
+            display: none;
+            justify-content: center;
+            flex-direction: column;
+            padding: 37px 0;
+        }
+
+    }
+    &__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include media(992){
+            flex-direction: column;
+        }
+    }
+    &__item{
+        margin-right: 15px;
+        &:last-child{
+            margin-right: 0;
+        }
+        @include media(992){
+            margin-bottom: 20px;
+        }
+    }
+    &__link{
+        font-weight: 400;
+        font-size: 16px;
+        text-decoration: none;
+        color: #fff;
+        transition: .2s;
+        display: block;
+        &:hover{
+            color: $gold;
+            transform: scale(1.1);
+        }
+    }
+    &__apply{
+        padding: 14px 27px;
+        background: $gold;
+        border-radius: 90px;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        font-size: 15px;
+        color: #fff;
+        transition: .2s;
+        &:hover{
+            background: $green;
+        }
+    }
+    &__btn{
+        border: none;
+        background: transparent;
+        color: #fff;
+        font-size: 25px;
+        display: none;
+        cursor: pointer;
+        &::after{
+            content: "\f0c9";
+        }
+        &.active{
+            &::after{
+                content: "\f00d";
+            }
+        }
+        @include media(992){
+            display: block;
+        }
+    }
+}

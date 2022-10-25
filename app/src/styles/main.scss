@@ -1,0 +1,77 @@
+@import './layout/_fonts',
+        './layout/var.scss',
+        './layout/_header',
+        './components/slider.scss',
+        './components/apply.scss',
+        './components/choose.scss',
+        './components/video.scss',
+        './components/service.scss',
+        './components/accardion.scss',
+        './layout/_footer';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat";
+}
+body{
+    background: #282B38;
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.next-btn{
+    padding: 21px 20px 21px 33px;
+    background: $gold;
+    border-radius: 90px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    & span{
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        margin-right: 50px;
+    }
+    & i{
+        font-size: 26px;
+        color: #B26519;
+        &::after{
+            content: "\f0a9";
+        }
+    }
+    @include media(576){
+        padding: 20px;
+        margin: 0 auto;
+    }
+}
+.section__title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 85px;
+        height: 2px;
+        background: $gold;
+    }
+}

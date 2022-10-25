@@ -1,0 +1,69 @@
+section.apply 
+    .container
+        .apply-info
+            .apply-title 
+                h2 Получить рассчет стоимости доставки вашего груза
+                span 
+            .apply-box 
+                .apply-step.active 1
+                .apply-step 2
+                .apply-step 3
+                form.apply-block(action="").active
+                    .apply-input 
+                        label(for="") Категория товара:
+                        input(type="text" placeholder="Категория товара")
+                    .apply-input 
+                        label(for="") Стоимость груза:
+                        input(type="text" placeholder="Введите стоимость")
+                    .apply-input 
+                        label(for="") Вес груза (кг):
+                        input(type="text" placeholder="Введите вес")
+                    .apply-input 
+                        label(for="") Объем груза (м3):
+                        input(type="text" placeholder="Введите объем")
+                    .apply-checkbox 
+                        .apply-check 
+                            input(type="checkbox")
+                            p Страховка
+                        .apply-check 
+                            input(type="checkbox")
+                            p Таможенное оформление
+                    .apply-input 
+                        label(for="") Код ТН ВЭД:
+                        input(type="text" placeholder="Введите код")
+                    .apply-photo 
+                        p фотография.jpeg
+                        a(href="#!") Удалить фото
+                    .apply-download Загрузить фото товара
+                    button.next-btn.apply-btn
+                        span Следующий шаг
+                        i.far
+                form.apply-block(action="") 
+                    .apply-input.apply-name
+                        label(for="") Имя:
+                        input(type="text" placeholder="Ваше имя")
+                    .apply-input 
+                        label(for="") Номер телефона:
+                        input(type="text" placeholder="+99 (8__) ___ - __ - __")
+                    .apply-input 
+                        label(for="") Email:
+                        input(type="text" placeholder="Введите e-mail")
+                    .apply-area 
+                        label(for="") Комментарий:
+                        textarea(rows="5" placeholder="Подробности о товаре, описание, количество")
+                    .apply-btns 
+                        a.apply-back Назад
+                        button.next-btn.apply-next
+                            span Следующий шаг
+                            i.far
+                .apply-block.apply-done
+                    i.far.apply-circle
+                    h3.apply__done-title Спасибо за заявку!
+                    p.apply__done-text Мы обязатальено свяжемся с вами.
+                    h4.apply__done-list Так же для вас может быть полезно:
+                    ul.apply-list 
+                        li.apply-item Услуги
+                        li.apply-item Примеры грузоперевозок
+                        li.apply-item Поиск товаров в Китае
+        .apply-img 
+            img(src="./images/apply.png", alt="image")

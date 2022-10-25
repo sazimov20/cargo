@@ -1,0 +1,302 @@
+.apply{
+    margin-top: 40px;
+    & .container{
+        display: flex;
+        align-items: center;
+        @include media(1400){
+            align-items: flex-end;
+        }
+        @include media(1100){
+            justify-content: center;
+        }
+    }
+    &-info{
+        width: 625px;
+    }
+    &-img{
+        width: 400px;
+        @include media(1400){
+            & img{
+                width: 100%;
+            }
+        }
+        @include media(1100){
+            display: none;
+        }
+    }
+    &-title{
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 45px;
+        color: #fff;
+        margin-bottom: 62px;
+        position: relative;
+        & span{
+            position: absolute;
+            width: 15%;
+            height: 2px;
+            background: $green;
+            display: block;
+            right: 5%;
+            bottom: 20%;
+        }
+        @include media(700){
+            text-align: center;
+            & span{
+                display: none;
+            }
+        }
+    }
+    &-box{
+        position: relative;
+    }
+    &-step{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #282B38;
+        border: 2px solid #363A4D;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 24px;
+        color: #BFBFBF;
+        position: absolute;
+        top: 0;
+        left: 50px;
+        transform: translateY(-50%);
+
+        &:nth-child(2){
+            transform: translate(180%,-50%);
+            @include media(576){
+                transform: translate(130%,-50%);
+            }
+        }
+
+        &:nth-child(3){
+            transform: translate(360%,-50%);
+            @include media(576){
+                transform: translate(130%,-50%);
+            }
+        }
+
+        &.active{
+            background: $green;
+            color: #fff;
+        }
+    }
+    &-block{
+        background: $gray;
+        border-radius: 20px;
+        padding: 70px 50px 40px;
+        display: none;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &.active{
+            display: flex;
+            @include media(700){
+                flex-direction: column;
+            }
+            @include media(576){
+                padding: 50px 20px 20px ;
+            }
+        }
+    }
+    &-input{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+
+        & label{
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 19px;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        & input{
+            padding: 18px 20px;
+            width: 248px;
+            background: #fff;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 19px;
+            color: #000;
+            border: none;
+            outline: none;
+
+            &::placeholder{
+                color: #CBCBCB;
+            }
+            
+        @include media(700){
+            width: 100%;
+        }
+        }
+    }
+    &-checkbox{
+        display: flex;
+        flex-direction: column;
+    }
+    &-check{
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+           
+        @include media(700){
+            margin-bottom: 15px;
+        }
+        & input{
+            background: #FFFFFF;
+            border: 1px solid #282B38;
+            border-radius: 4px;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        & p{
+            font-weight: 600;
+            font-size: 15px;
+            color: #fff;
+        }
+    }
+    &-photo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        margin-bottom: 15px;
+        & p{
+            font-weight: 400;
+            font-size: 15px;
+            color: #fff;
+        }
+        & a{
+            font-weight: 400;
+            font-size: 13px;
+            color: #E53535;
+        }
+    }
+    &-download{
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+        border: 1px dashed rgba(255, 255, 255, 0.26);
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 15px;
+        color: #fff;
+        cursor: pointer;
+        margin-bottom: 25px;
+    }
+}
+
+// apply step 2
+
+.apply{
+    &-name{
+        width: 100%;
+        & input{
+            width: 100%;
+        }
+    }
+    &-area{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 44px;
+        & label{
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 19px;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        & textarea{
+            padding: 18px 20px;
+            width: 100%;
+            background: #fff;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 19px;
+            color: #000;
+            border: none;
+            outline: none;
+
+            &::placeholder{
+                color: #CBCBCB;
+            }
+        }
+    }
+    &-btns{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        @include media(700){
+            flex-direction: column;
+            & button{
+                margin-top: 15px;
+            }
+        }
+    }
+    &-back{
+        padding: 22px 46px;
+        border: 1px solid #E58D35;
+        border-radius: 90px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+// apply step 3
+
+.apply{
+    &-done{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &-circle{
+        font-size: 112px;
+        color: $green;
+        margin-bottom: 34px;
+        &::after{
+            content: "\f058";
+        }
+    }
+    &__done-title{
+        font-weight: 700;
+        font-size: 32px;
+        color: #fff;
+    }
+    &__done-text{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        color: #fff;
+        margin-bottom: 35px;
+    }
+    &__done-list{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 29px;
+        color: #fff;
+        margin-bottom: 12px;
+    }
+    &-list{
+        padding-left: 30px;
+    }
+    &-item{
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        list-style: outside;
+    }
+}

@@ -1,0 +1,53 @@
+.accardion{
+    margin-top: 90px;
+    &__block{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+    &__box{
+        width: 100%;
+        padding: 18px 19px 21px 34px;
+        border: 1px solid #3A444E;
+        border-radius: 10px;
+        margin-bottom: 16px;
+        transition: 0.3s;
+        &.active{
+            background: #FFFFFF;
+            box-shadow: 5px 15px 40px rgba(11, 24, 97, 0.32);
+            border-radius: 10px;
+            & .accardion__title{
+                color: #282B38;
+                &::after{
+                    content: "\f0aa";
+                    color: $gold;
+                }
+            }
+            & .accardion__body{
+                display: block;
+            }
+        }
+    }
+    &__title{
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &::after{
+            content: "\f0a9";
+            font-size: 26px;
+        }
+    }
+    &__body{
+        display: none;
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 25px;
+        color: #282B38;
+    }
+}

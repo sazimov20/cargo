@@ -1,0 +1,21 @@
+section.video 
+    h2.section__title video
+    .container 
+        video(src="./videos/cargo.mp4", poster="./images/poster.jfif").video-mp4
+        p.video__speed-watch 1x
+        .video-media 
+            .video-controls 
+                i.far.video__prev-speed
+                i.far.video__prev
+                i.far.video__play
+                i.far.video__next
+                i.far.video__next-speed
+            .video-progress
+                p.video-time#start 00:00
+                .video-duration 
+                    .video-line 
+                        .video-ruler
+                p.video-time#end 00:00
+            .video-volume 
+                i.far.video__volume-icon.normal 
+                input(type="range", name="")

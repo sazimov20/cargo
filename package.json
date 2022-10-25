@@ -1,0 +1,39 @@
+{
+  "name": "gulp1930",
+  "version": "1.0.0",
+  "description": "this gulp for testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp.js node.js script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fayzullaev99/gulp1930.git"
+  },
+  "author": "myself",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fayzullaev99/gulp1930/issues"
+  },
+  "homepage": "https://github.com/Fayzullaev99/gulp1930#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "babel-preset-minify": "^0.5.2",
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "node-sass": "^7.0.3"
+  },
+  "dependencies": {
+    "gulp-include": "^2.4.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "sass": "^1.54.9"
+  }
+}

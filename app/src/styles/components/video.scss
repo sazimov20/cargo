@@ -1,0 +1,159 @@
+.video{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    & .container{
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+        &:hover{
+            .video-media{
+                transform: translateY(0%);
+            }
+        }
+    }
+    &-mp4{
+        width: 100%;
+    }
+    &__speed-watch{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,50%);
+        font-size: 35px;
+        font-weight: 500;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+    &-media{
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        transform: translateY(100%);
+        transition: .3s;
+        & i{
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0 5px;
+            &:hover{
+                color: $gold;
+            }
+        }
+    }
+    &__prev-speed{
+        &::after{
+            content: "\f049";
+        }
+    }
+    &__prev{
+        &::after{
+            content: "\f0d9";
+        }
+    }
+    &__play{
+        &::after{
+            content: "\f04b";
+        }
+        &.active{
+            &::after{
+                content: "\f04c";
+            }
+        }
+    }
+    &__next-speed{
+        &::after{
+            content: "\f050";
+        }
+    }
+    &__next{
+        &::after{
+            content: "\f0da";
+        }
+    }
+    &-progress{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        margin: 0 10px;
+    }
+    &-time{
+        font-size: 20px;
+        color: #fff;
+        width: 75px;
+        text-align: center;
+
+        @include meadia(1400){
+            
+        }
+    }
+    &-duration{
+        flex-grow: 1;
+        height: 5px;
+        background: #fff;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    &-line{
+        height: 100%;
+        width: 0%;
+        background: $gold;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &-ruler{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: $gold;
+    }
+    &-volume{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__volume-icon{
+        color: #fff;
+        font-size: 20px;
+        width: 25px;
+        margin-right: 10px;
+        &.mute{
+            &::after{
+                content: "\f2e2";
+            }
+        }
+        &.off{
+            &::after{
+                content: "\f026";
+            }
+        }
+        &.down{
+            &::after{
+                content: "\f027";
+            }
+        }
+        &.normal{
+            &::after{
+                content: "\f6a8";
+            }
+        }
+        &.up{
+            &::after{
+                content: "\f028";
+            }
+        }
+    }
+}

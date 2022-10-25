@@ -1,0 +1,94 @@
+.footer{
+    margin-top: 70px;
+    padding-bottom: 60px;
+    & .container{
+        padding-top: 40px;
+        border-top: 2px solid $gold;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 70px;
+        @include media(850){
+            grid-gap: 70px; 
+        }
+
+    }
+    &__box{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        @include media(850){
+            margin: 0 auto; 
+        }
+
+        & a,p{
+            color: #fff;
+            font-weight: 400;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            line-height: 23px;
+        }
+    }
+    &__logo{
+        margin-bottom: 28px;
+    }
+    &__mail{
+        text-decoration: underline !important;
+    }
+    &__apps{
+        display: flex;
+        margin-top: 20px;
+        & div{
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 16px;
+            & a{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__insta{
+        background: linear-gradient(0deg, #E09B3D 0.46%, #C74C4D 22.72%, #C21975 60.76%, #7024C4 93.22%);
+        & i{
+            &::after{
+                content: "\f16d";
+            }
+        }
+    }
+    &__twitter{
+        background: #4065D6;
+        margin: 0 8px;
+        & i{
+            &::after{
+                content: "\f099";
+            }
+        }
+    }
+    &__telegram{
+        background: #039BE5;
+        & i{
+            &::after{
+                content: "\f3fe";
+            }
+        }
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    &__item{
+        margin-bottom: 10px;
+    }
+    &__link{
+        text-decoration: underline !important;
+        color:#85899C !important;
+        font-size: 16px;
+    }
+}
